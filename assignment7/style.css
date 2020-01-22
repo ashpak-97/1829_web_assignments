@@ -1,0 +1,60 @@
+
+div {
+	width: 50px;
+	height: 100px;
+  position: relative;
+  -webkit-animation-name: one;
+  -webkit-animation-duration: 6s; 
+  -webkit-animation-iteration-count: infinite; 
+  animation-name: one;
+  animation-iteration-count: infinite;
+}
+
+.car {
+	width: 200px;
+	margin-top:60px;
+	position: relative;
+  -webkit-animation-name: car; 
+  -webkit-animation-duration: 4s; 
+  -webkit-animation-iteration-count: infinite; 
+  animation-name: car;
+  animation-iteration-count: infinite;
+}
+
+.car1 {
+	width: 200px;
+	margin-top:180px;
+  position: relative;
+  -webkit-animation-name: car;
+  -webkit-animation-duration: 6s; 
+  -webkit-animation-iteration-count: infinite; 
+  animation-name: car;
+  animation-iteration-count: infinite;
+}
+
+.plane {
+	width: 170px;
+	margin-top:20px;
+  position: relative;
+  -webkit-animation-name: plane;
+  -webkit-animation-duration: 3s; 
+  -webkit-animation-iteration-count: infinite; 
+  animation-name: plane;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes car {
+  0%   {left:0px; }
+  100% { left:1500px;}
+}
+@keyframes one {
+  0%   {left:0px; top:0px;}
+  100% { left:1600px; top:0px;}
+}
+
+@keyframes plane {
+	0% { left:1400px;}
+  100%   { left:-300px;}
+
+}
