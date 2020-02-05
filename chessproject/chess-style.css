@@ -1,0 +1,20 @@
+/* Chess Board with wooden Theme */
+.grid-chessboard {
+	
+	display:grid;
+	margin:6.5rem 12rem 12rem 12rem;
+	border:0.050rem solid brown;
+	grid-template-columns:repeat(8,1fr);
+	grid-template-rows:repeat(8,1fr);
+	font-size:4.5rem;
+    text-align:center;
+    
+}
+.black-item {
+   
+    background-color:rgb(255, 128, 0); 
+}
+.white-item {
+    
+    background-color:rgb(255, 0, 0);
+}
