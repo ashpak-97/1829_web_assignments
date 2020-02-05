@@ -1,0 +1,31 @@
+<html>
+	<head>
+	<style>
+		#a1{
+			visibility:hidden;
+		}
+	</style>
+	<script>
+	function func(id){
+	 var a = document.getElementById(id);
+		if (a.style.visibility === 'hidden'){
+			a.style.visibility = 'visible';
+		}else {
+		a.style.visibility = 'hidden';
+		}
+	}
+	</script>
+</head>
+	<body style="color:#CD5C5C; font-family: italic, Helvetica, sans-serif;">
+		<div id="q1" onclick="func('a1')"><h3>Question: What are some common lists that are used when designing a page?</h3></div>
+		
+		<div id="a1"><h3>Answer: There are many common lists which are used to design a page. You can choose any or a combination of the following list types:
+			
+				Ordered list - The ordered list displays elements in numbered format. It is represented by  tag.
+				<Unordered list - The unordered list displays elements in bulleted format. It is represented by 
+			Definition list - The definition list displays elements in definition form like in dictionary. The  and tags are used to define description list.
+			
+		</h3>
+	</div>
+</body>
+</html>
