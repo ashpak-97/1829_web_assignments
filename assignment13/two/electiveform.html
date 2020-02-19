@@ -1,0 +1,117 @@
+<html>
+
+<head>
+	<style>
+			.elective-form{
+				margin-top: 40px;
+				margin-left: 15px;
+				float:left;
+				width:45%;
+				border: 1px solid black;
+				padding:10px;
+			}
+
+
+			.student{
+				float:right;
+				width:40%;
+			}
+
+		
+		</style>
+
+	<script>
+		function formValidate() {
+			var electives = "";
+
+			var rn = document.forms["form"]["rollno"].value;
+			var nm = document.forms["form"]["name"].value;
+			var sm = document.getElementById("sel").value;
+			var el1 = document.forms["form"]["Ethical"].value;
+			var el2 = document.forms["form"]["Iot"].value;
+			var el3 = document.forms["form"]["Music"].value;
+			var gd = document.forms["form"]["gender"].value;
+			
+
+			if (document.forms["form"]["Ethical"].checked)
+				electives = el1;
+			if (document.forms["form"]["Iot"].checked)
+				electives = electives + "," + el2;
+			if (document.forms["form"]["Music"].checked)
+				electives = electives + "," + el3;
+
+			if (rn == "") {
+				alert("Enter your Roll No");
+				return false;
+			}
+			if (nm == "") {
+				alert("Enter your name");
+				return false;
+			}
+
+			var sttable = document.getElementById("stable");
+			var row = sttable.insertRow(1);
+			var col1 = row.insertCell(0);
+			var col2 = row.insertCell(1);
+			var col3 = row.insertCell(2);
+			var col4 = row.insertCell(3);
+			var col5 = row.insertCell(4);
+			col1.innerHTML = rn;
+			col2.innerHTML = nm;
+			col3.innerHTML = gd;
+			col4.innerHTML = sm;
+			col5.innerHTML = electives;
+		}
+
+
+	</script>
+
+
+</head>
+
+<body>
+	<div class="elective-form">
+		<form name="form" onsubmit="return formValidate()">
+			Roll no:<input id="nm" type="number" name="rollno">
+
+			<br><br>
+			Name:<input type="text" name="name">
+			<br><br>
+
+			Gender:<br><input type="radio" name="gender" value="male"> Male
+			<input type="radio" name="gender" value="female"> Female
+			<input type="radio" name="gender" value="others"> Others<br><br>
+			Semester:
+			<select id="sel">
+				<option value="sem-1">Semester 1</option>
+				<option value="sem-2">Semester 2</option>
+				<option value="sem-3">Semester 3</option>
+				<option value="sem-4">Semester 4</option>
+			</select>
+			<br><br>
+			<fieldset>
+				<legend>Electives:</legend>
+				<input type="checkbox" name="Ethical" value="Ethical">Ethical Hacking<br>
+				<input type="checkbox" name="Iot" value="Iot">Iot<br>
+				<input type="checkbox" name="Music" value="Music">Music<br><br>
+			</fieldset><br>
+			<input type="button" value="Submit" onclick="formValidate()">
+		</form>
+
+	</div>
+
+	<div class="student">
+
+		<table id="stable">
+			<tr>
+				<th>Roll no</th>
+				<th>Name</th>
+				<th>Gender</th>
+				<th>Semester</th>
+				<th>Electives</th>
+			</tr>
+		</table>
+	</div>
+</body>
+
+</html>
